@@ -1,0 +1,29 @@
+html, body, header, h1, h2, h3, h4, h5, a, nav, ul, li, section, div, p, br, image, article, time, small, footer {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0 7%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 10%;
+  }
+  .Inner {
+    overflow: hidden;
+  }
+}
+/*# sourceMappingURL=base.css.map */

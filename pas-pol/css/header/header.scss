@@ -1,0 +1,226 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  .siteLogo {
+    float: left;
+    margin-top: 50px;
+    margin-left: 7%;
+
+    a {
+      display: block;
+      overflow: hidden;
+      text-indent: 100%;
+      white-space: nowrap;
+      background: url("../../image/logo/siteLogo.png") no-repeat;
+      width: 265px;
+      height: 70px;
+      background-size: 265px 70px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .nav-top {
+    float: right;
+    margin-top: 75px;
+    margin-right: 7%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-left: 40px;
+
+        a {
+          font-size: 14px;
+          font-family: "Gill Sans Std Book", sans-serif;
+          color: white;
+          font-weight: 400;
+          padding-bottom: 8px;
+          border-bottom: 2px solid transparent;
+          text-decoration: none;
+          letter-spacing: 0.1em;
+
+          &:hover {
+            border-color: white;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navToggle {
+  display: none;
+}
+
+/* 900px 以下 */
+@media screen and (max-width: 900px) {
+  .header {
+    .siteLogo {
+
+    }
+  }
+  .header .nav-top ul {
+    display: block;
+  }
+
+  nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    width: 300px;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 6;
+    opacity: 0;
+  }
+  .open nav {
+    left: 0;
+    opacity: 1;
+  }
+  nav .inner {
+    padding: 25px;
+  }
+  nav .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .inner ul li {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid #333;
+  }
+  .header .nav-top ul li a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  nav .inner ul li a:hover {
+    background: #e4e4e4;
+  }
+}
+@media screen and (max-width: 900px) {
+ nav {
+   left: -220px;
+   width: 220px;
+  }
+
+    /*============
+    .toggle_btn
+    =============*/
+  .toggle_btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    border-radius: 4px;
+    transition: all .5s;
+  }
+  .toggle_btn span:nth-child(1) {
+    top: 4px;
+  }
+  .toggle_btn span:nth-child(2) {
+    top: 14px;
+  }
+  .toggle_btn span:nth-child(3) {
+    bottom: 4px;
+  }
+  .open .toggle_btn span {
+    background-color: #fff;
+  }
+  .open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+  }
+  .open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+  }
+  .open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+  }
+  /*============
+  #mask
+  =============*/
+  #mask {
+    display: none;
+    transition: all .5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+/* レスポンシブ対応 ipad */
+@media screen and (max-width: 900px) {
+  .header {
+    .navToggle {
+      display: block;
+      text-align: left;
+      padding: 30px 40px 10px;
+      background-color: #fff;
+      margin: -2%;
+    }
+    .siteLogo {
+      display: none;
+    }
+    .nav-top {
+      float: none;
+      margin: 0;
+
+      .navToggle {
+        display: block;
+        text-align: left;
+
+      }
+    }
+  }
+
+}
+
+/* レスポンシブ対応 スマホ */
+@media screen and (max-width: 480px) {
+
+}

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+.sns {
+  background-color: #fff;
+  position: relative;
+  padding: 35px 0;
+}
+
+.sns .sns-button {
+  font-size: 0;
+  letter-spacing: -1em;
+  word-spacing: -1em;
+  text-align: center;
+}
+
+.sns .sns-button .sns-button-item {
+  display: inline-block;
+  vertical-align: top;
+  display: inline;
+  zoom: 1;
+  font-size: 1rem;
+  letter-spacing: normal;
+  word-spacing: normal;
+  margin: 0 15px;
+}
+
+.sns .sns-button .sns-button-item .button {
+  text-decoration: none;
+  display: inline-block;
+  width: 160px;
+  height: 45px;
+  line-height: 48px;
+  font-size: 12px;
+  border: 1px solid;
+  text-align: center;
+  font-family: "Gill Sans Std Book", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.sns .sns-button .sns-button-item .button:hover {
+  opacity: 1;
+}
+
+.sns .sns-button .sns-button-item .button-line {
+  display: none;
+}
+
+.container-2 {
+  max-width: 100%;
+  padding: 0;
+}
+
+.button-facebook {
+  color: #4871a9;
+  border-color: #4871a9;
+}
+
+.button-twitter {
+  color: #70bdd3;
+  border-color: #70bdd3;
+}
+
+.button-hatena {
+  color: #2f9bcd;
+  border-color: #2f9bcd;
+}
+
+.button-line {
+  color: #8ec09d;
+  border-color: #8ec09d;
+}
+
+.pageTop {
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  margin-right: -25px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url("../../image/logo/pageTop.png") no-repeat;
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* レスポンシブ対応 ipad */
+/* レスポンシブ対応 スマホ */
+@media screen and (max-width: 480px) {
+  .sns-button-item-line {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=sns.css.map */

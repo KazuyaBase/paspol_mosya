@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.top-wrapper-1 {
+  margin: 0 auto;
+  width: 100%;
+  height: 630px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.top-wrapper-1 ul {
+  width: 100%;
+  height: 630px;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-wrapper-1 ul li {
+  top: 0;
+  left: 0;
+  width: 1350px;
+  height: 630px;
+  display: none;
+  position: absolute;
+}
+
+.site-logo-sp {
+  display: none;
+}
+
+/* 900px 以下 */
+@media screen and (max-width: 900px) {
+  .top-wrapper-1 ul li {
+    width: 100%;
+    z-index: 2;
+  }
+  .top-wrapper-1 ul li img {
+    width: 100%;
+  }
+  .site-logo-sp {
+    display: block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: url("../../image/main/siteLogo-sp.png") no-repeat;
+    width: 197px;
+    height: 178px;
+    background-size: 197px 178px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+}
+
+/* レスポンシブ対応 スマホ */
+@media screen and (max-width: 480px) {
+  .top-wrapper-1 ul li {
+    width: 1000px;
+    left: -400px;
+  }
+  .top-wrapper-1 ul li img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
